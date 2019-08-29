@@ -40,6 +40,7 @@ a img {
   width: 100%;
   height: 100vh;
   background-color: #fafafa;
+  overflow: auto;
 }
 
 .important-msg{
@@ -47,6 +48,7 @@ a img {
   line-height: 1em;
   margin: 30vh 0 0 8vw;
 }
+
 #header {
   position: fixed;
   top: 0;
@@ -484,9 +486,9 @@ ul.toc {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
 
-  .toc-holder {
+  /* .toc-holder {
     display: none;
   }
 
@@ -528,6 +530,9 @@ ul.toc {
 
   li.mobile-header a {
     color: #b1b1b1;
+  } */
+  .important-msg{
+    margin: 20vh 0 0 8vw;
   }
 }
 
