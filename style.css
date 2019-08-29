@@ -315,6 +315,7 @@ img.icon:hover {
   line-height: 20px;
 }
 
+
 /*TOC*/
 .container {
   width: 90%;
@@ -453,7 +454,11 @@ ul.toc {
   -moz-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
 }
-
+@media screen and (max-width:1100px) {
+  #footer span{
+    margin: 0 1em;
+  }
+}
 @media screen and (max-width:910px) {
   img.icon{
     display: none;
