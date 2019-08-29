@@ -211,7 +211,6 @@ span.answer {
   padding: 7px 25px;
   /* opacity: 0.6; */
   transition: 0.3s;
-  margin-left: .5em;
   border: 1px solid #eb4034;
   background-color: #ffffff;
 }
@@ -453,6 +452,11 @@ ul.toc {
   border-radius: 10px 10px 0 0;
 }
 
+@media screen and (max-width:910px) {
+  img.icon{
+    display: none;
+  }
+}
 @media screen and (max-width:860px) {
   .portfolio-thumb {
     width: 90%;
