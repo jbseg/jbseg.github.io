@@ -189,6 +189,7 @@ img.icon:hover {
   margin: 20px;
   background-color: white;
   display: inline-block;
+  box-shadow: 1px 1px 5px #a8a8a8;
   /*//height: 500px;*/
 }
 
@@ -254,6 +255,7 @@ img.icon:hover {
 
 @media (max-width: 500px) {
   .important-msg{
-    margin: 20vh 0 0 8vw;
+    margin: 30vh 0 0 8vw;
+    font-size: 3em;
   }
 }
