@@ -395,10 +395,9 @@
 							program. The master listened for queries from the
 							client, and then distributed the work to the workers.
 							The workers were created from a pool of threads, to
-							avoid the overhead of creating and destroying threads.
-							We also implemented a heart beat system between workers to
-							master so that the master knew which workers were still
-							alive. The heartbeat paradigm can be found in google
+							avoid the overhead of creating and destroying threads. We also made the 
+							map reduce fault tolerant by implementing a heart beat system between workers to
+							master. The heartbeat paradigm can be found in google
 							file system and many other large system projects.
 							</br>
 							<span class="pill concept">Distributed System</span>
