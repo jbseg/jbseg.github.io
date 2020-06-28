@@ -349,24 +349,34 @@
 				</div>
 				<div class="row">
 					<div class="portfolio-thumb">
-						<a class="image-popup-no-margins" href="">
-							<img src="img/file-system.png" alt="AI Melody">
+						<a class="image-popup-no-margins">
+							<img src="img/file-system.png" alt="google file system">
 						</a>
 						<p class="description"><b>Distributed File System</b>&nbsp;&nbsp;
-							For my Operating Systems Class I made this
+							In my operating systems class, I worked in a group to
+							create a multi-threaded file server. It was built to
+							maximize the amount of concurrent reads and writes. We built the client to server protocol
+							from scratch! We created the message system, broke it
+							down to bits, then used sockets to send the message, and used error checking on both sides as we reinterpretted the bits. To traverse the file
+							system we created, we used hand over hand locking to safetly
+							maximize concurrency and provide an interface of read, write, create,
+							and delete files to the clients.
 							</br>
 							<span class="pill concept">Distributed System</span>
+							<span class="pill concept">Sockets</span>
+							<span class="pill concept">Client Server Paradigm</span>
 							<span class="pill concept">Hand Over Hand Locking</span>
 							<span class="pill concept">Multi threading</span>
 							<span class="pill language">C++</span>
 						</p>
 					</div>
 					<div class="portfolio-thumb">
-						<a class="image-popup-no-margins" href="https://youtu.be/I4fB-5tH9ZE">
-							<img src="img/threads.png" alt="AR research university of Buffalo">
+						<a class="image-popup-no-margins">
+							<img src="img/threads.png" alt="intel CPU">
 						</a>
 						<p class="description"><b>Thread Scheduler</b>&nbsp;&nbsp;
-							For Operating Systems Class I made this. I encountered some of the nastiest bugs, but perseviered.
+							In my operating systems class, we created a thread and lock API. This was a challenging task,
+							because we had to save the stack of each thread, move it around, then put it back on the CPU when the CPU became available. We built up locks and threads from just a single atomic bool switch statement and linux context savers. This project made me internalize and deeply understand how threads and locks work. It was the most difficult project I've ever done, but it taught me so much about debugging, multi-threading debugging, code design, and testing.
 						</br>
 							<span class="pill tool">Debugging</span>
 							<span class="pill concept">Multi threading</span>
@@ -376,29 +386,40 @@
 				</div>
 				<div class="row">
 					<div class="portfolio-thumb">
-						<a class="image-popup-no-margins" href="">
-							<img src="img/hadoop.png" alt="AI Melody">
+						<a class="image-popup-no-margins">
+							<img src="img/hadoop.png" alt="hadoop">
 						</a>
 						<p class="description"><b>Hadoop Map Reduce</b>&nbsp;&nbsp;
-							For my Operating Systems Class I made this
+							In my web systems class, we created a distributed master
+							worker paradigm to create an efficient map reduce
+							program. The master listened for queries from the
+							client, and then distributed the work to the workers.
+							The workers were created from a pool of threads, to
+							avoid the overhead of creating and destroying threads.
+							We also implemented a heart beat system between workers to
+							master so that the master knew which workers were still
+							alive. The heartbeat paradigm can be found in google
+							file system and many other large system projects.
 							</br>
 							<span class="pill concept">Distributed System</span>
-							<span class="pill concept">Hand Over Hand Locking</span>
+							<span class="pill concept">Master Worker Paradigm</span>
+							<span class="pill concept">Heartbeat Paradigm</span>
+							<span class="pill concept">Sockets</span>
 							<span class="pill concept">Multi threading</span>
-							<span class="pill language">C++</span>
+							<span class="pill language">Python</span>
 						</p>
 					</div>
 					<div class="portfolio-thumb">
-						<a class="image-popup-no-margins" href="https://youtu.be/I4fB-5tH9ZE">
-							<img src="img/scheme.png" alt="AR research university of Buffalo">
+						<a class="image-popup-no-margins">
+							<img src="img/scheme.png" alt="Scheme">
 						</a>
 						<p class="description"><b>Scheme Interpreter</b>&nbsp;&nbsp;
-							For Operating Systems Class I made this. I encountered some of the nastiest bugs, but perseviered.
+							For my programming language class, I created an interpreter of the language scheme in the functional language scheme. This included lexing, parsing, creating the AST, giving semantic meaning to it and returning a result. The interpreter worked as a Repl. I really liked understanding the process of how a language gets interpreted. It was also cool to learn a new programming paradigm.
 						</br>
-							<span class="pill tool">Debugging</span>
-							<span class="pill concept">Multi threading</span>
+							<span class="pill concept">Functional Programming</span>
+							<span class="pill concept">Interpreting</span>
 							<span class="pill concept">Synchronization</span>
-							<span class="pill language">C++</span>
+							<span class="pill language">Scheme</span>
 					</div>
 				</div>
 				<div class="row">
@@ -407,11 +428,15 @@
 							<img src="img/AI-melody.png" alt="AI Melody">
 						</a>
 						<p class="description"><b>AI Melody</b>&nbsp;&nbsp;
-							Mixed my passions for music and computer science to create 
-							melodic dictations. I came up with the algorithms for generating melodies.
-							These algorithms are based off of constraint and path finding ideas I put together
-							along with my own knowledge of music theory. I think it creates much more realistic 
-							melodies than those that were done using ML.
+							Mixed my passions for music and computer science to
+							create computer generated melodic dictations. I came up
+							with the algorithms for generating melodies that will
+							help stregthn music theory's students aural skills
+							through providing them unlimited practice. These
+							algorithms are based off of constraint and path finding
+							ideas and my own knowledge of music theory. I think it
+							creates much more realistic melodies than those that
+							were done using ML.
 							</br>
 							<span class="pill concept">AI</span>
 							<span class="pill concept">Algorithms</span>
@@ -423,11 +448,11 @@
 					</div>
 					<div class="portfolio-thumb">
 						<a class="image-popup-no-margins" href="https://youtu.be/I4fB-5tH9ZE">
-							<img src="img/Clinglish.png" alt="AR research university of Buffalo">
+							<img src="img/Clinglish.png" alt="Clinglish">
 						</a>
-						<p class="description"><b>Clinglish</b>&nbsp;&nbsp;
+						<p class="description"><b>VR English Learning Simulation</b>&nbsp;&nbsp;
 							Lead a team to create an emmersive English learning experience for my Senior Capstone class.
-							We used VR and NLP to create a virtual companion to practice english with.
+							We used VR and NLP to create a virtual reality simulation to practice English. The user speaks to the front end in VR, then the backend process the words and returns a response that the virtual companion says back. We also query many grammar and pronounciation APIs so that we can provide real time feedback to users. Using virtual reality to teach a language is a novel idea that I wanted to explore and see it's effectiveness.
 						</br>
 							<span class="pill tool">Unity</span>
 							<span class="pill tool">Clinc</span>
