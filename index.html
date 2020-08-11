@@ -37,12 +37,12 @@
 					<img class="headshot" src="img/NalaAndMe.jpg" alt="Headshot">
 				<!-- </div> -->
 				<div>
-						Hello I'm Josh. In my arms is my baby Nala 🥰. I
-						consider myself a life long learner and am a big fan of
-						free education. I'm currently in search of a full time
-						role for 2021. In simple terms, I'm looking for a
+						Hello I'm Josh. In my arms is my <b>baby Nala 🥰</b>. I
+						consider myself a <b>life long learner</b> and am a big fan of
+						free education. I'm currently in search of a <b>full time
+						role for 2021</b>. In simple terms, I'm looking for a
 						challenging job, that I will learn and grow a lot from.
-						In more specific terms, I've found system engineering to be
+						In more specific terms, I've found <b>system engineering</b> to be
 						exactly the kind of challenge that interests me.
 						Anything to do with synchronization, fault tolerance, or
 						system design is super interesting to me. 
@@ -188,7 +188,7 @@
 					era. I Challenge Myself promotes fitness and healthy
 					lifestyles in underfunded communities, so we worked closely
 					with the non profit to created a social media app to gamify
-					pariticipating in challenges remotely. I also Created an
+					pariticipating in challenges remotely. I also created an
 					alert system prototype using Apache Kafka and Flask API to
 					monitor server side issues. Finally, I built an application
 					to help traders view the stocks in real time using React and
@@ -206,6 +206,7 @@
 					<span class="pill language">Python</span>
 					<span class="pill language">Java</span>
 					<span class="pill concept">Agile</span>
+					<span class="pill concept">Application Computer Security</span>
 					<span class="pill concept">Remote Work</span>
 				</p>
 				<br />
@@ -403,22 +404,27 @@
 						<a class="image-popup-no-margins">
 							<img src="img/file-system.png" alt="google file system">
 						</a>
-						<p class="description"><b>File Server</b>&nbsp;&nbsp;
+						<p class="description"><b>Network File Server</b>&nbsp;&nbsp;
 							In my operating systems class, I worked in a group to
-							create a multi-threaded file server. It was built to
-							maximize the amount of concurrent reads and writes. We built the client to server protocol
-							from scratch! We created the message system, broke it
-							down to bits, then used sockets to send the message, and used error checking on both sides
-							as we reinterpretted the bits. To traverse the file
-							system we created, we used hand over hand locking to safetly
-							maximize concurrency and provide an interface of read, write, create,
-							and delete files to the clients.
+							create a synchronized, fault tolerant file server. To
+							traverse the file system, we used hand over hand locking
+							to safetly maximize concurrency. We provide an interface
+							of read, write, create, and delete files to the clients.
+							We gracefully managed a file exceeding the size of it's
+							disk block by maintaining disk data structures that mapped
+							where all the memory of a file lived. We also built a
+							secure, robust client to server protocol from scratch!
+							The client server protocol involved creating the
+							message, breaking it down to bits, encryping the
+							message, sending the message using Berkley sockets, and
+							robustly error checking the message on the other side.
 							</br>
 							<span class="pill concept">Distributed System</span>
 							<span class="pill concept">Sockets</span>
 							<span class="pill concept">Client Server Paradigm</span>
 							<span class="pill concept">Hand Over Hand Locking</span>
 							<span class="pill concept">Multi threading</span>
+							<span class="pill tool">Assert Statements</span>
 							<span class="pill language">C++</span>
 						</p>
 					</div>
@@ -426,18 +432,33 @@
 						<a class="image-popup-no-margins">
 							<img src="img/threads.png" alt="intel CPU">
 						</a>
-						<p class="description"><b>Thread Scheduler</b>&nbsp;&nbsp;
-							In my operating systems class, we created a thread and lock API. This was a challenging
-							task,
-							because we had to save the stack of each thread, move it around, then put it back on the CPU
-							when the CPU became available. We built up locks and threads from just a single atomic bool
-							switch statement and linux context savers. This project made me internalize and deeply
-							understand how threads and locks work. It was the most difficult project I've ever done, but
-							it taught me so much about debugging, multi-threading debugging, code design, and testing.
+						<p class="description"><b>Thread Library</b>&nbsp;&nbsp;
+							In my operating systems class, we created a multicore
+							compatible thread, mutex, and cv library. We built up
+							the library from a test-and-set instruction and linux
+							context managers. We spent a week carefully thinking
+							about and designing the OS datastructures needed to
+							manage this project. The data structures rougly involve
+							maintining queues for CPUs, mutexes, and cv's along with
+							managing thread contexts. The library is extremely robust,
+							and is able to gracefully handle CPU interrupts at any
+							point in time. We learned to use a copious amount of
+							assert statements to catch bugs early, and smart print
+							statements to make sense of underterministic code. It
+							was the most difficult project I've ever done, but it
+							taught me so much about debugging, multi-threading
+							debugging, code design, and testing. I loved the
+							challenge of this project and it made me deeply
+							understand how threads and locks work. 
 							</br>
-							<span class="pill tool">Debugging</span>
+							<span class="pill concept">Multi Threading Debugging</span>
 							<span class="pill concept">Multi threading</span>
 							<span class="pill concept">Synchronization</span>
+							<span class="pill tool">Linux Context Managers</span>
+							<span class="pill tool">Assert Statements</span>
+							<span class="pill tool">Threads</span>
+							<span class="pill tool">Mutexes</span>
+							<span class="pill tool">CV's</span>
 							<span class="pill language">C++</span>
 					</div>
 				</div>
@@ -452,10 +473,13 @@
 							program. The master listened for queries from the
 							client, and then distributed the work to the workers.
 							The workers were created from a pool of threads, to
-							avoid the overhead of creating and destroying threads. We also made the
-							map reduce fault tolerant by implementing a heart beat system between workers to
-							master. The heartbeat paradigm can be found in google
-							file system and many other large system projects.
+							avoid the overhead of creating and destroying threads.
+							The communication from the master to worker was done
+							using python sockets. We also made the map reduce fault
+							tolerant by implementing a heart beat system between
+							workers to master. The heartbeat paradigm can be found
+							in google file system and many other large system
+							projects.
 							</br>
 							<span class="pill concept">Distributed System</span>
 							<span class="pill concept">Master Worker Paradigm</span>
