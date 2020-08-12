@@ -43,16 +43,16 @@ a img {
   overflow: auto;
 }
 
-.important-msg{
+.welcome-container{
   font-size: 2em;
   line-height: 1.2em;
   margin: 30vh 0 0 8vw;
 }
 
-.important-msg div {
+.welcome-container div {
 	vertical-align: top;
 	padding-left: 50px;
-	max-width: 700px;
+	max-width: 1000px;
 	/* padding-right: 100px; */
 	/* width: 800px; */
 	display: inline-block;
@@ -305,6 +305,11 @@ img.icon:hover {
   line-height: 20px;
 }
 
+@media screen and (max-width:1550px) {
+  .welcome-container div{
+	  width: 800px;
+  }
+}
 
 @media screen and (max-width:1250px) {
   #footer span{
@@ -313,7 +318,7 @@ img.icon:hover {
   .headshot{
 	  width: 200px;
   }
-  .important-msg div{
+  .welcome-container div{
 	  width: 500px;
   }
 }
